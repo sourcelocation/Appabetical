@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Dynamic
 
 @main
 struct AppabeticalApp: App {
@@ -16,6 +17,7 @@ struct AppabeticalApp: App {
                 if (notAniPad()) {
                     checkNewVersions()
                 }
+                print(Dynamic.STUsageReporter().applicationAndWebUsage().asArray)
             }
         }
     }

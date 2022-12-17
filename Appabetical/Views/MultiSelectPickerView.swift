@@ -22,26 +22,26 @@ struct MultiSelectPickerView: View {
                 Section(header: Text("Pages"), footer: hiddenPages.isEmpty ? Text("") : Text("All hidden pages will be unhidden.")) {
                     ForEach(1...numPages, id: \.self) { item in
                         Button(action: {
-                            withAnimation {
-                                if self.selectedItems.contains(item) {
-                                    self.selectedItems.removeAll(where: { $0 == item })
-                                } else {
-                                    self.selectedItems.append(item)
-                                }
-                                self.selectedItems.sort()
-                                if !areNeighbouring(pages: self.selectedItems) {
-                                    self.pageOp = PageOptions.individually // bug here
-                                }
+                            if self.selectedItems.contains(item) {
+                                self.selectedItems.removeAll(where: { $0 == item })
+                            } else {
+                                self.selectedItems.append(item)
+                            }
+                            self.selectedItems.sort()
+                            if !areNeighbouring(pages: self.selectedItems) {
+                                self.pageOp = PageOptions.individually // bug here
                             }
                         }) {
                             HStack {
-                                Image(systemName: "checkmark")
-                                    .opacity(self.selectedItems.contains(item) ? 1.0 : 0.0)
                                 if hiddenPages.contains(item) {
                                     Text("Page \(String(item)) (hidden)")
                                 } else {
                                     Text("Page \(String(item))")
                                 }
+                                Spacer()
+                                Image(systemName: "checkmark")
+                                    .opacity(self.selectedItems.contains(item) ? 1.0 : 0.0)
+                                    .foregroundColor(.blue)
                             }
                         }
                         .foregroundColor(.primary)

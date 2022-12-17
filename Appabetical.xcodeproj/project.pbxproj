@@ -22,6 +22,9 @@
 		25AC3A12294805A200F5A201 /* IconStateValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3A11294805A200F5A201 /* IconStateValidate.swift */; };
 		CE3397C9294DF76E00299BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3397C8294DF76E00299BE8 /* Assets.xcassets */; };
 		CE3397CC294DF89B00299BE8 /* ApplicationsWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = CE3397CB294DF89B00299BE8 /* ApplicationsWrapper */; };
+		CE437F1E294E2FD000C079BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE437F1D294E2FD000C079BF /* Constants.swift */; };
+		CE437F21294E55C800C079BF /* Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CE437F20294E55C800C079BF /* Dynamic */; };
+		CE437F23294E562900C079BF /* ScreenTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE437F22294E562900C079BF /* ScreenTime.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,8 @@
 		25AC3A0F2947F83200F5A201 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		25AC3A11294805A200F5A201 /* IconStateValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconStateValidate.swift; sourceTree = "<group>"; };
 		CE3397C8294DF76E00299BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE437F1D294E2FD000C079BF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE437F22294E562900C079BF /* ScreenTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenTime.framework; path = System/Library/Frameworks/ScreenTime.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE437F23294E562900C079BF /* ScreenTime.framework in Frameworks */,
+				CE437F21294E55C800C079BF /* Dynamic in Frameworks */,
 				25787CB629471C82002BA871 /* AssetCatalogWrapper in Frameworks */,
 				CE3397CC294DF89B00299BE8 /* ApplicationsWrapper in Frameworks */,
 			);
@@ -115,6 +122,7 @@
 				25787CAE2946F3E7002BA871 /* AppUtils.swift */,
 				25745EBC294988DF003245EE /* GeneralUtils.swift */,
 				25745EBE2949897C003245EE /* BackupUtils.swift */,
+				CE437F1D294E2FD000C079BF /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 		CE3397CA294DF89B00299BE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE437F22294E562900C079BF /* ScreenTime.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,6 +154,7 @@
 			packageProductDependencies = (
 				25787CB529471C82002BA871 /* AssetCatalogWrapper */,
 				CE3397CB294DF89B00299BE8 /* ApplicationsWrapper */,
+				CE437F20294E55C800C079BF /* Dynamic */,
 			);
 			productName = Appabetical;
 			productReference = 25A3C7BD293D66430061A435 /* Appabetical.app */;
@@ -177,6 +187,7 @@
 			mainGroup = 25A3C7B4293D66430061A435;
 			packageReferences = (
 				25787CB429471C82002BA871 /* XCRemoteSwiftPackageReference "SantanderWrappers" */,
+				CE437F1F294E55C800C079BF /* XCRemoteSwiftPackageReference "Dynamic" */,
 			);
 			productRefGroup = 25A3C7BE293D66430061A435 /* Products */;
 			projectDirPath = "";
@@ -215,6 +226,7 @@
 				258CEEC0294898C800D767CA /* Alert.swift in Sources */,
 				25A3C7C1293D66430061A435 /* AppabeticalApp.swift in Sources */,
 				25745EBD294988DF003245EE /* GeneralUtils.swift in Sources */,
+				CE437F1E294E2FD000C079BF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +448,14 @@
 				kind = branch;
 			};
 		};
+		CE437F1F294E55C800C079BF /* XCRemoteSwiftPackageReference "Dynamic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mhdhejazi/Dynamic";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -448,6 +468,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 25787CB429471C82002BA871 /* XCRemoteSwiftPackageReference "SantanderWrappers" */;
 			productName = ApplicationsWrapper;
+		};
+		CE437F20294E55C800C079BF /* Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE437F1F294E55C800C079BF /* XCRemoteSwiftPackageReference "Dynamic" */;
+			productName = Dynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

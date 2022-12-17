@@ -8,14 +8,6 @@
 import SwiftUI
 import MobileCoreServices
 
-let fm = FileManager.default
-let plistUrl = URL(fileURLWithPath: "/var/mobile/Library/SpringBoard/IconState.plist")
-let plistUrlBkp = URL(fileURLWithPath: "/var/mobile/Library/SpringBoard/IconState.plist.bkp")
-let plistUrlNew = URL(fileURLWithPath: "/var/mobile/Library/SpringBoard/IconState.plist.new")
-let savedLayoutUrl = URL(fileURLWithPath: "/var/mobile/Library/SpringBoard/IconState.plist.saved")
-let webClipFolderUrl = URL(fileURLWithPath: "/var/mobile/Library/WebClips/")
-let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
-let iconsOnAPage = 24 // iPads are either 20 or 30 I believe... no support yet
 
 struct ContentView: View {
     // Sort the selected pages
@@ -183,6 +175,15 @@ struct ContentView: View {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        openURL(URL(string: "https://discord.gg/VyVcNjRMeg")!)
+                    }) {
+                        Image("discord")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 24)
+                    }
+                    Button(action: {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
                         openURL(URL(string: "https://github.com/Avangelista/Appabetical")!)
                     }) {
                         Image("github")
@@ -190,14 +191,26 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 24, height: 24)
                     }
-                    Button(action: {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        openURL(URL(string: "https://ko-fi.com/avangelista")!)
-                    }) {
+                    Menu {
+                        Button {
+                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                            openURL(URL(string: "https://ko-fi.com/avangelista")!)
+                        } label: {
+                            Label("Avangelista", systemImage: "1.circle")
+                        }
+                        
+                        Button {
+                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                            openURL(URL(string: "https://ko-fi.com/sourcelocation")!)
+                        } label: {
+                            Label("sourcelocation", systemImage: "2.circle")
+                        }
+                    } label: {
                         Image(systemName: "heart.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 20, height: 20)
+                            .foregroundColor(.blue)
                     }
                 }
             }
