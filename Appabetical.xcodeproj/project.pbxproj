@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25733B5E293DFEE000E10D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25733B5D293DFEE000E10D10 /* Assets.xcassets */; };
 		25745EBD294988DF003245EE /* GeneralUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25745EBC294988DF003245EE /* GeneralUtils.swift */; };
 		25745EBF2949897C003245EE /* BackupUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25745EBE2949897C003245EE /* BackupUtils.swift */; };
 		25787CAD2946B194002BA871 /* UIImage+UIImageAverageColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 25787CAC2946B194002BA871 /* UIImage+UIImageAverageColorAddition.m */; };
@@ -21,10 +20,11 @@
 		25AC3A0E2947F80800F5A201 /* MultiSelectPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3A0D2947F80800F5A201 /* MultiSelectPickerView.swift */; };
 		25AC3A102947F83200F5A201 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3A0F2947F83200F5A201 /* Enums.swift */; };
 		25AC3A12294805A200F5A201 /* IconStateValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3A11294805A200F5A201 /* IconStateValidate.swift */; };
+		CE3397C9294DF76E00299BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3397C8294DF76E00299BE8 /* Assets.xcassets */; };
+		CE3397CC294DF89B00299BE8 /* ApplicationsWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = CE3397CB294DF89B00299BE8 /* ApplicationsWrapper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		25733B5D293DFEE000E10D10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		25745EBC294988DF003245EE /* GeneralUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralUtils.swift; sourceTree = "<group>"; };
 		25745EBE2949897C003245EE /* BackupUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupUtils.swift; sourceTree = "<group>"; };
 		25787CAB2946B17A002BA871 /* UIImage+UIImageAverageColorAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageAverageColorAddition.h"; sourceTree = "<group>"; };
@@ -36,11 +36,11 @@
 		25A3C7C2293D66430061A435 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		25A3C7C7293D66440061A435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		25A3C7D0293D8EC60061A435 /* Appabetical-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Appabetical-Bridging-Header.h"; sourceTree = "<group>"; };
-		25A3C7D4293D96BA0061A435 /* CoreServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CoreServices.h; path = ../../../../../Downloads/CoreServices.h; sourceTree = "<group>"; };
 		25AC3A0B2947F76C00F5A201 /* ComparatorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparatorUtils.swift; sourceTree = "<group>"; };
 		25AC3A0D2947F80800F5A201 /* MultiSelectPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectPickerView.swift; sourceTree = "<group>"; };
 		25AC3A0F2947F83200F5A201 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		25AC3A11294805A200F5A201 /* IconStateValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconStateValidate.swift; sourceTree = "<group>"; };
+		CE3397C8294DF76E00299BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25787CB629471C82002BA871 /* AssetCatalogWrapper in Frameworks */,
+				CE3397CC294DF89B00299BE8 /* ApplicationsWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +61,7 @@
 			children = (
 				25A3C7BF293D66430061A435 /* Appabetical */,
 				25A3C7BE293D66430061A435 /* Products */,
+				CE3397CA294DF89B00299BE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,22 +76,17 @@
 		25A3C7BF293D66430061A435 /* Appabetical */ = {
 			isa = PBXGroup;
 			children = (
+				CE3397C6294DEE6C00299BE8 /* Utils */,
+				CE3397C5294DEE5F00299BE8 /* Views */,
 				258CEEBF294898C800D767CA /* Alert.swift */,
 				25A3C7C0293D66430061A435 /* AppabeticalApp.swift */,
 				25AC3A11294805A200F5A201 /* IconStateValidate.swift */,
-				25AC3A0B2947F76C00F5A201 /* ComparatorUtils.swift */,
-				25787CAE2946F3E7002BA871 /* AppUtils.swift */,
-				25A3C7C2293D66430061A435 /* ContentView.swift */,
 				25AC3A0F2947F83200F5A201 /* Enums.swift */,
-				25AC3A0D2947F80800F5A201 /* MultiSelectPickerView.swift */,
 				25787CAB2946B17A002BA871 /* UIImage+UIImageAverageColorAddition.h */,
 				25787CAC2946B194002BA871 /* UIImage+UIImageAverageColorAddition.m */,
-				25A3C7D4293D96BA0061A435 /* CoreServices.h */,
 				25A3C7D0293D8EC60061A435 /* Appabetical-Bridging-Header.h */,
-				25733B5D293DFEE000E10D10 /* Assets.xcassets */,
 				25A3C7C6293D66440061A435 /* Preview Content */,
-				25745EBC294988DF003245EE /* GeneralUtils.swift */,
-				25745EBE2949897C003245EE /* BackupUtils.swift */,
+				CE3397C8294DF76E00299BE8 /* Assets.xcassets */,
 			);
 			path = Appabetical;
 			sourceTree = "<group>";
@@ -100,6 +97,33 @@
 				25A3C7C7293D66440061A435 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE3397C5294DEE5F00299BE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25A3C7C2293D66430061A435 /* ContentView.swift */,
+				25AC3A0D2947F80800F5A201 /* MultiSelectPickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE3397C6294DEE6C00299BE8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				25AC3A0B2947F76C00F5A201 /* ComparatorUtils.swift */,
+				25787CAE2946F3E7002BA871 /* AppUtils.swift */,
+				25745EBC294988DF003245EE /* GeneralUtils.swift */,
+				25745EBE2949897C003245EE /* BackupUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE3397CA294DF89B00299BE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +144,7 @@
 			name = Appabetical;
 			packageProductDependencies = (
 				25787CB529471C82002BA871 /* AssetCatalogWrapper */,
+				CE3397CB294DF89B00299BE8 /* ApplicationsWrapper */,
 			);
 			productName = Appabetical;
 			productReference = 25A3C7BD293D66430061A435 /* Appabetical.app */;
@@ -167,8 +192,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3397C9294DF76E00299BE8 /* Assets.xcassets in Resources */,
 				25A3C7C8293D66440061A435 /* Preview Assets.xcassets in Resources */,
-				25733B5E293DFEE000E10D10 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Appabetical/Preview Content\"";
-				DEVELOPMENT_TEAM = U67AKNW8PW;
+				DEVELOPMENT_TEAM = 92S6JX27W2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -355,7 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Appabetical/Preview Content\"";
-				DEVELOPMENT_TEAM = U67AKNW8PW;
+				DEVELOPMENT_TEAM = 92S6JX27W2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -418,6 +443,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 25787CB429471C82002BA871 /* XCRemoteSwiftPackageReference "SantanderWrappers" */;
 			productName = AssetCatalogWrapper;
+		};
+		CE3397CB294DF89B00299BE8 /* ApplicationsWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25787CB429471C82002BA871 /* XCRemoteSwiftPackageReference "SantanderWrappers" */;
+			productName = ApplicationsWrapper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
